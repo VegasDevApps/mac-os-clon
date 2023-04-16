@@ -1,0 +1,12 @@
+<div class="desktop-screen">
+    <div class="desktop-screen__menu">
+        <app-menu></app-menu>
+    </div>
+    <div class="desktop-screen__dock">
+        <app-dock (launchpadOpened)="launchPadOpened = true"></app-dock>
+    </div>
+</div>
+
+<p-sidebar [(visible)]="launchPadOpened" [fullScreen]="true">
+    <app-launchpad></app-launchpad>
+</p-sidebar>
